@@ -14,4 +14,32 @@ class PavadzimeTableViewCell: UITableViewCell {
     @IBOutlet weak var pavConsigneeAddress: UILabel!
     @IBOutlet weak var pavConsigneePhone: UILabel!
     @IBOutlet weak var pavTotal: UILabel!
+    
+    // MARK: - data
+        var pavMadeData:Pavadzime? {
+            didSet {
+                if let made = self.pavMadeData {
+                    self.pavNumurs?.text = made.pavNumber
+                    self.pavData?.text = "String(made.pavData)"
+                    self.pavConsignee?.text = made.pavConsignee
+                    self.pavConsigneeAddress?.text = made.pavConigneeAddress
+                    self.pavConsigneePhone?.text = made.pavConsigneePhone
+                    self.pavTotal?.text = String(made.pavTotal)
+              }
+                else {
+                    self.pavNumurs?.text = nil
+                    self.pavData?.text = nil
+                    self.pavConsignee?.text = nil
+                    self.pavConsigneeAddress?.text = nil
+                    self.pavConsigneePhone?.text = nil
+                    self.pavTotal?.text = nil
+                }
+            }
+        }
+
+    
+    
+    
+    
+    
 }

@@ -8,20 +8,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--PAVADZĪMES-->
         <scene sceneID="Iqt-eX-8K5">
             <objects>
-                <tableViewController id="67N-YU-8GA" sceneMemberID="viewController">
+                <tableViewController id="67N-YU-8GA" customClass="PavadzimeController" customModule="swift_05_kontroldarbs" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="EwK-x5-sDr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="147" id="Kvv-OM-3wP" customClass="PavadzimeTableViewCell" customModule="swift_05_kontroldarbs" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="147"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pavCellIdentifier" rowHeight="175" id="Kvv-OM-3wP" customClass="PavadzimeTableViewCell" customModule="swift_05_kontroldarbs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kvv-OM-3wP" id="HKI-ff-Kxh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pavadzīme PV000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icd-16-c8P">
@@ -38,10 +38,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BFq-AV-APO">
-                                            <rect key="frame" x="20" y="60.5" width="374" height="75"/>
+                                            <rect key="frame" x="20" y="67.5" width="374" height="91.5"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-9t-0eS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180.5" height="75"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-9t-0eS">
+                                                    <rect key="frame" x="0.0" y="16.5" width="180.5" height="75"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThD-vk-Z4D">
                                                             <rect key="frame" x="0.0" y="0.0" width="45.5" height="20"/>
@@ -70,7 +70,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total 300000 EUR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHj-kw-YJH">
-                                                    <rect key="frame" x="234" y="54.5" width="140" height="20.5"/>
+                                                    <rect key="frame" x="234" y="71" width="140" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -80,7 +80,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="icd-16-c8P" secondAttribute="trailing" constant="5" id="5c9-Gf-m5R"/>
-                                        <constraint firstItem="BFq-AV-APO" firstAttribute="top" secondItem="yR0-kb-SXA" secondAttribute="bottom" id="H3p-rZ-FFQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="BFq-AV-APO" secondAttribute="bottom" constant="5" id="6bP-8J-6lN"/>
+                                        <constraint firstItem="BFq-AV-APO" firstAttribute="top" secondItem="yR0-kb-SXA" secondAttribute="bottom" constant="7" id="H3p-rZ-FFQ"/>
                                         <constraint firstItem="yR0-kb-SXA" firstAttribute="leading" secondItem="HKI-ff-Kxh" secondAttribute="leadingMargin" id="LBI-OD-SnA"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yR0-kb-SXA" secondAttribute="trailing" id="Vyi-sa-5CC"/>
                                         <constraint firstItem="BFq-AV-APO" firstAttribute="leading" secondItem="HKI-ff-Kxh" secondAttribute="leading" constant="20" id="hNc-oM-dbL"/>
@@ -106,7 +107,7 @@
                             <outlet property="delegate" destination="67N-YU-8GA" id="gzV-vg-xyr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="twI-DB-kcL"/>
+                    <navigationItem key="navigationItem" title="PAVADZĪMES" id="twI-DB-kcL"/>
                     <connections>
                         <segue destination="918-EG-RBm" kind="showDetail" identifier="PavDetailIdentifier" id="Zpn-44-I0K"/>
                     </connections>

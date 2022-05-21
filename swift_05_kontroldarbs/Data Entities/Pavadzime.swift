@@ -16,7 +16,7 @@ class Pavadzime {
     var pavGoods: [Prece]
     var pavTotal: Float
     
-    init(pavNumber: String, pavData: Date, pavConsignee: String, pavConigneeAddress: String?, pavConsigneePhone: String?, pavGoods: [Prece]) {
+    init(pavNumber: String, pavData: Date = Date(), pavConsignee: String, pavConigneeAddress: String?, pavConsigneePhone: String?, pavGoods: [Prece]) {
         self.pavNumber = pavNumber
         self.pavData = pavData
         self.pavConsignee = pavConsignee
