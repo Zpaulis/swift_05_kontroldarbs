@@ -12,7 +12,7 @@ class PavadzimeController: UITableViewController {
 // MARK: - Data model
     var pavadzimes = [Pavadzime]()
     var preces = [Prece]()
-
+    var selectedPav: Pavadzime?
 
 
     override func viewDidLoad() {
@@ -84,7 +84,25 @@ class PavadzimeController: UITableViewController {
     }
 
 
-    
+    // MARK: - UITableViewDelegate
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            // Get data item
+            // Get section data = Made
+           // let pav: Pavadzime = self.pavadzimes[indexPath.section]
+            // Get model in section
+            self.selectedPav = pavadzimes[indexPath.row]
+
+            self.performSegue(withIdentifier: "PavDetailIdentifier", sender: self)
+        }
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "PavDetailIdentifier" {
+                if let ctrl = segue.destination as? PrecesController {
+    // Pass data
+                    ctrl.pav = self.selectedPav
+                }
+            }
+        }
     
     
 }

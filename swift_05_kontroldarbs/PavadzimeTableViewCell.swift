@@ -19,12 +19,13 @@ class PavadzimeTableViewCell: UITableViewCell {
         var pavMadeData:Pavadzime? {
             didSet {
                 if let made = self.pavMadeData {
-                    self.pavNumurs?.text = made.pavNumber
+                    self.pavNumurs?.text = "NR. " + made.pavNumber
                     self.pavData?.text = "String(made.pavData)"
                     self.pavConsignee?.text = made.pavConsignee
-                    self.pavConsigneeAddress?.text = made.pavConigneeAddress
-                    self.pavConsigneePhone?.text = made.pavConsigneePhone
-                    self.pavTotal?.text = String(made.pavTotal)
+                    self.pavConsigneeAddress?.text = "Adrese:\n" + (made.pavConigneeAddress ?? "nav zināāma")
+                    self.pavConsigneePhone?.text = "Tālr.: " + (made.pavConsigneePhone ?? "nav zināms")
+                    let total = (made.pavTotal * 100.0).rounded()/100
+                    self.pavTotal?.text = String(total) + " EUR"
               }
                 else {
                     self.pavNumurs?.text = nil

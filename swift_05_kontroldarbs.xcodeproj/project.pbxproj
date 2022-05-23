@@ -10,6 +10,8 @@
 		C0434D9B2835846F0045667B /* PavadzimesControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0434D9A2835846F0045667B /* PavadzimesControler.swift */; };
 		C08DF78028343E06008B2282 /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08DF77F28343E06008B2282 /* DetailHeaderCell.swift */; };
 		C08DF7832834450C008B2282 /* DetailFootherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08DF7822834450C008B2282 /* DetailFootherCell.swift */; };
+		C0D6EE122839492D00705815 /* PrecesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D6EE112839492D00705815 /* PrecesController.swift */; };
+		C0D6EE14283C04DF00705815 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D6EE13283C04DF00705815 /* DetailCell.swift */; };
 		C0E788222832CE6E003E9095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E788212832CE6E003E9095 /* AppDelegate.swift */; };
 		C0E788242832CE6E003E9095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E788232832CE6E003E9095 /* SceneDelegate.swift */; };
 		C0E788262832CE6E003E9095 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E788252832CE6E003E9095 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		C0434D9A2835846F0045667B /* PavadzimesControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavadzimesControler.swift; sourceTree = "<group>"; };
 		C08DF77F28343E06008B2282 /* DetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		C08DF7822834450C008B2282 /* DetailFootherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFootherCell.swift; sourceTree = "<group>"; };
+		C0D6EE112839492D00705815 /* PrecesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecesController.swift; sourceTree = "<group>"; };
+		C0D6EE13283C04DF00705815 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		C0E7881E2832CE6E003E9095 /* swift_05_kontroldarbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_05_kontroldarbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E788212832CE6E003E9095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E788232832CE6E003E9095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,11 +85,13 @@
 				C0E788232832CE6E003E9095 /* SceneDelegate.swift */,
 				C0E788252832CE6E003E9095 /* ViewController.swift */,
 				C0434D99283581DF0045667B /* Data Entities */,
+				C0E788392832F436003E9095 /* PavadzimeTableViewCell.swift */,
 				C08DF77F28343E06008B2282 /* DetailHeaderCell.swift */,
 				C08DF7822834450C008B2282 /* DetailFootherCell.swift */,
+				C0D6EE13283C04DF00705815 /* DetailCell.swift */,
 				C0E788272832CE6E003E9095 /* Main.storyboard */,
+				C0D6EE112839492D00705815 /* PrecesController.swift */,
 				C0434D9A2835846F0045667B /* PavadzimesControler.swift */,
-				C0E788392832F436003E9095 /* PavadzimeTableViewCell.swift */,
 				C0E7882A2832CE6F003E9095 /* Assets.xcassets */,
 				C0E7882C2832CE6F003E9095 /* LaunchScreen.storyboard */,
 				C0E7882F2832CE6F003E9095 /* Info.plist */,
@@ -165,12 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0434D9B2835846F0045667B /* PavadzimesControler.swift in Sources */,
+				C0D6EE14283C04DF00705815 /* DetailCell.swift in Sources */,
 				C0E788262832CE6E003E9095 /* ViewController.swift in Sources */,
 				C0E788362832D048003E9095 /* Prece.swift in Sources */,
 				C0E788382832D3A8003E9095 /* Pavadzime.swift in Sources */,
 				C0E7883A2832F436003E9095 /* PavadzimeTableViewCell.swift in Sources */,
 				C08DF7832834450C008B2282 /* DetailFootherCell.swift in Sources */,
 				C08DF78028343E06008B2282 /* DetailHeaderCell.swift in Sources */,
+				C0D6EE122839492D00705815 /* PrecesController.swift in Sources */,
 				C0E788222832CE6E003E9095 /* AppDelegate.swift in Sources */,
 				C0E788242832CE6E003E9095 /* SceneDelegate.swift in Sources */,
 			);
