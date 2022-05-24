@@ -17,9 +17,9 @@ class Prece {
     init(article: String, name: String, price: Float, amount: Float) {
         self.article = article
         self.name = name
-        self.price = (price * 100).rounded() / 100
+        self.price = price
         self.amount = amount
-        self.subtotal = (price * amount * 100).rounded() / 100
+        self.subtotal = (price * amount)
     }
     
 }

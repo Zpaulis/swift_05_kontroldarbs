@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C027F5E5283D7B840019973D /* PriceFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027F5E4283D7B840019973D /* PriceFormat.swift */; };
+		C027F5E8283D85440019973D /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027F5E7283D85440019973D /* DateFormat.swift */; };
 		C0434D9B2835846F0045667B /* PavadzimesControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0434D9A2835846F0045667B /* PavadzimesControler.swift */; };
 		C08DF78028343E06008B2282 /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08DF77F28343E06008B2282 /* DetailHeaderCell.swift */; };
 		C08DF7832834450C008B2282 /* DetailFootherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08DF7822834450C008B2282 /* DetailFootherCell.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C027F5E4283D7B840019973D /* PriceFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormat.swift; sourceTree = "<group>"; };
+		C027F5E7283D85440019973D /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		C0434D9A2835846F0045667B /* PavadzimesControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavadzimesControler.swift; sourceTree = "<group>"; };
 		C08DF77F28343E06008B2282 /* DetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		C08DF7822834450C008B2282 /* DetailFootherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFootherCell.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C027F5E6283D81BD0019973D /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				C027F5E7283D85440019973D /* DateFormat.swift */,
+				C027F5E4283D7B840019973D /* PriceFormat.swift */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
 		C0434D99283581DF0045667B /* Data Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,7 @@
 		C0E788202832CE6E003E9095 /* swift_05_kontroldarbs */ = {
 			isa = PBXGroup;
 			children = (
+				C027F5E6283D81BD0019973D /* Utilites */,
 				C0E788212832CE6E003E9095 /* AppDelegate.swift */,
 				C0E788232832CE6E003E9095 /* SceneDelegate.swift */,
 				C0E788252832CE6E003E9095 /* ViewController.swift */,
@@ -176,8 +190,10 @@
 				C0E788362832D048003E9095 /* Prece.swift in Sources */,
 				C0E788382832D3A8003E9095 /* Pavadzime.swift in Sources */,
 				C0E7883A2832F436003E9095 /* PavadzimeTableViewCell.swift in Sources */,
+				C027F5E8283D85440019973D /* DateFormat.swift in Sources */,
 				C08DF7832834450C008B2282 /* DetailFootherCell.swift in Sources */,
 				C08DF78028343E06008B2282 /* DetailHeaderCell.swift in Sources */,
+				C027F5E5283D7B840019973D /* PriceFormat.swift in Sources */,
 				C0D6EE122839492D00705815 /* PrecesController.swift in Sources */,
 				C0E788222832CE6E003E9095 /* AppDelegate.swift in Sources */,
 				C0E788242832CE6E003E9095 /* SceneDelegate.swift in Sources */,

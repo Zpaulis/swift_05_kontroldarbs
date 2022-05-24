@@ -19,10 +19,7 @@ class DetailHeaderCell:UITableViewCell {
     var pavadzime: Pavadzime? {
         didSet {
             if let detail = self.pavadzime {
-                let dateFormatterPrint = DateFormatter()
-                dateFormatterPrint.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                let datums = dateFormatterPrint.string(from: detail.pavData)
-                self.detailData?.text = datums
+               self.detailData?.text = datePrint(date: detail.pavData)
                 self.detailConsignee?.text = detail.pavConsignee
             }
             else {

@@ -17,7 +17,7 @@ class DetailFootherCell:UITableViewCell {
     var pavadzime: Pavadzime? {
         didSet {
             if let detail = self.pavadzime {
-                self.detailTotal?.text = "Kopējā summa \((detail.pavTotal * 100.0).rounded()/100) EUR"
+                self.detailTotal?.text = "Kopējā summa " + priceFormat(price: detail.pavTotal)
             }
             else {
                 self.detailTotal?.text = nil

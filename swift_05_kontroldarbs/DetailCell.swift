@@ -25,7 +25,7 @@ class DetailCell: UITableViewCell {
                 self.goodArtikuls?.text = detail.article
                 self.goodNosaukums?.text = detail.name
                 self.goodDaudzums?.text = String(detail.amount)
-                self.goodSumma?.text = String(detail.subtotal)
+                self.goodSumma?.text = priceFormat(price: detail.subtotal)
             }
             else {
                 self.goodArtikuls?.text = nil
