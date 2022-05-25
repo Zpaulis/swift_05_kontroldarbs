@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 class DetailFootherCell:UITableViewCell {
-
-// MARK: - Outlets
+    
+    // MARK: - Outlets
     @IBOutlet weak var detailTotal: UILabel!
     
-// MARK: - data
+    // MARK: - data
     var pavadzime: Pavadzime? {
         didSet {
             if let detail = self.pavadzime {
@@ -24,5 +24,4 @@ class DetailFootherCell:UITableViewCell {
             }
         }
     }
-
 }

@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 class DetailHeaderCell:UITableViewCell {
-
-// MARK: - Outlets
-
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var detailData: UILabel!
     @IBOutlet weak var detailConsignee: UILabel!
-
-// MARK: - data
+    
+    // MARK: - data
     var pavadzime: Pavadzime? {
         didSet {
             if let detail = self.pavadzime {
-               self.detailData?.text = datePrint(date: detail.pavData)
+                self.detailData?.text = datePrint(date: detail.pavData)
                 self.detailConsignee?.text = detail.pavConsignee
             }
             else {
@@ -28,5 +28,4 @@ class DetailHeaderCell:UITableViewCell {
             }
         }
     }
-
 }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// Valūtas (cenas) formāts
 func priceFormat(price: Float?) -> String {
     if let input = price {
         let formatter = NumberFormatter()

@@ -9,20 +9,20 @@ import Foundation
 import UIKit
 
 class PavadzimeController: UITableViewController {
-// MARK: - Data model
+    // MARK: - Data model
     var pavadzimes = [Pavadzime]()
     var preces = [Prece]()
     var selectedPav: Pavadzime?
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-// Load/create data
+        // Load/create data
         self.loadData()
     }
     func loadData() {
         preces = [Prece(article: "89480", name: "Kreppapīrs", price: 0.5, amount: 20),
-                  Prece(article: "DX18081", name: "DEXLER bezvadu Bluetooth V4.2 + EDR skaļrunis 2 x 3W, meln", price: 42.81, amount: 1),
+                  Prece(article: "DX18081", name: "DEXLER bezvadu Bluetooth V4.2 + EDR skaļrunis 2 x 3W, melns", price: 42.81, amount: 1),
                   Prece(article: "92027", name: "Uzlīmju noņemšanas sprejs 200 ml FOROFIS", price: 9.71, amount: 20),
                   Prece(article: "DX18011", name: "DEXLER Universāls Micro USB uz USB Datu & Ātrās Uzlādes 2 A kabelis 1M", price: 2.46, amount: 3),
                   Prece(article: "9501", name: "Sejas aizsargmaskas melna krāsa PP 3-kārtas (50gab.)", price: 8.44, amount: 130),
@@ -62,47 +62,41 @@ class PavadzimeController: UITableViewController {
                                 pavConigneeAddress: "Empīriskā dipersija, Mazpisānu pag. Lielautu nov. 6782",
                                 pavConsigneePhone: "+371 6776677667",
                                 pavGoods: [preces[5], preces[4], preces[9], preces[6]])
-                                          ]
+        ]
         
+        // Sakārtot pavadzīmes pēc datuma
+        pavadzimes = pavadzimes.sorted(by: { $0.pavData > $1.pavData })
         
     }
     
     // Sekciju skaits
-        override func numberOfSections(in tableView: UITableView) -> Int {
-           return 1
-        }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     // Sunu skaits sekcija
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return pavadzimes.count
-        }
-    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pavadzimes.count
+    }
+    //MARK: - Custom cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pavCellIdentifier") as? PavadzimeTableViewCell
         let pavadzime = pavadzimes[indexPath.row]
         cell?.pavMadeData = pavadzime
         return cell!
     }
-
-
+    
     // MARK: - UITableViewDelegate
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            // Get data item
-            // Get section data = Made
-           // let pav: Pavadzime = self.pavadzimes[indexPath.section]
-            // Get model in section
-            self.selectedPav = pavadzimes[indexPath.row]
-
-            self.performSegue(withIdentifier: "PavDetailIdentifier", sender: self)
-        }
-
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "PavDetailIdentifier" {
-                if let ctrl = segue.destination as? PrecesController {
-    // Pass data
-                    ctrl.pav = self.selectedPav
-                }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedPav = pavadzimes[indexPath.row]
+        self.performSegue(withIdentifier: "PavDetailIdentifier", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PavDetailIdentifier" {
+            if let ctrl = segue.destination as? PrecesController {
+                // Pass data
+                ctrl.pav = self.selectedPav
             }
         }
-    
-    
+    }
 }

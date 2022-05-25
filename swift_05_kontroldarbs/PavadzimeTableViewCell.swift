@@ -16,31 +16,25 @@ class PavadzimeTableViewCell: UITableViewCell {
     @IBOutlet weak var pavTotal: UILabel!
     
     // MARK: - data
-        var pavMadeData:Pavadzime? {
-            didSet {
-                if let made = self.pavMadeData {
-                    self.pavNumurs?.text = "NR. " + made.pavNumber
-                    self.pavData?.text = datePrint(date: made.pavData)
-                    self.pavConsignee?.text = made.pavConsignee
-                    self.pavConsigneeAddress?.text = "Adrese:\n" + (made.pavConigneeAddress ?? "nav zināāma")
-                    self.pavConsigneePhone?.text = "Tālr.: " + (made.pavConsigneePhone ?? "nav zināms")
-                    let total = (made.pavTotal * 100.0).rounded()/100
-                    self.pavTotal?.text = priceFormat(price: total)
-              }
-                else {
-                    self.pavNumurs?.text = nil
-                    self.pavData?.text = nil
-                    self.pavConsignee?.text = nil
-                    self.pavConsigneeAddress?.text = nil
-                    self.pavConsigneePhone?.text = nil
-                    self.pavTotal?.text = nil
-                }
+    var pavMadeData:Pavadzime? {
+        didSet {
+            if let made = self.pavMadeData {
+                self.pavNumurs?.text = "NR. " + made.pavNumber
+                self.pavData?.text = datePrint(date: made.pavData)
+                self.pavConsignee?.text = made.pavConsignee
+                self.pavConsigneeAddress?.text = "Adrese:\n" + (made.pavConigneeAddress ?? "nav zināāma")
+                self.pavConsigneePhone?.text = "Tālr.: " + (made.pavConsigneePhone ?? "nav zināms")
+                let total = (made.pavTotal * 100.0).rounded()/100
+                self.pavTotal?.text = priceFormat(price: total)
+            }
+            else {
+                self.pavNumurs?.text = nil
+                self.pavData?.text = nil
+                self.pavConsignee?.text = nil
+                self.pavConsigneeAddress?.text = nil
+                self.pavConsigneePhone?.text = nil
+                self.pavTotal?.text = nil
             }
         }
-
-    
-    
-    
-    
-    
+    }
 }

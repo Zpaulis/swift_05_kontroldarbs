@@ -10,13 +10,11 @@ import UIKit
 
 class DetailCell: UITableViewCell {
     
-   //MARK: - Outlets
-    
+    //MARK: - Outlets
     @IBOutlet weak var goodArtikuls: UILabel!
     @IBOutlet weak var goodNosaukums: UILabel!
     @IBOutlet weak var goodDaudzums: UILabel!
     @IBOutlet weak var goodSumma: UILabel!
-    
     
     //MARK: - Data
     var good: Prece? {
@@ -35,12 +33,6 @@ class DetailCell: UITableViewCell {
             }
         }
     }
-
-    
-    
-    
-    
-    
 }
 
 
